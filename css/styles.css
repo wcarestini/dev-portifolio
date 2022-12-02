@@ -15,10 +15,10 @@ header {
 
   background-color: black;
   height: 5em;
-  width: 80%;
+  max-width: 100%;
   padding: 0 4rem;
 
-  position: fixed;
+  /* position: fixed; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,12 +29,17 @@ header nav#navigation-menu {
 }
 
 section {
-  min-height: 100vw;
+  min-height: 100vh;
   padding: 0 4rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
+}
+
+h1 {
+  font-family: "Prata", sans-serif;
 }
 
 img {
@@ -43,28 +48,25 @@ img {
 }
 
 section#principal {
-  justify-content: space-between;
+  /* justify-content: unset; */
+  /* gap: 8rem; */
 
-  padding: 8rem 4rem;
+  /* padding: 2rem 4rem; */
 }
 
 section#principal .principal-section-companies__container {
-  max-width: 300px;
+  max-width: 100%;
   min-height: 10%;
+
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 2rem;
 }
-
-section#principal .principal-section-content__container {
-  padding-top: 2rem;
-}
-
 section#principal .principal-section-content__container h1 {
-  font-size: 36px;
-  line-height: 4.2rem;
+  font-size: 30px;
+  line-height: 3rem;
   font-family: "Prata", sans-serif;
 }
 
@@ -115,8 +117,102 @@ section#principal .principal-section-content__container p {
   width: 100%;
 }
 
+section#about {
+  align-items: flex-start;
+
+  background-color: #1a1f24;
+
+  color: gray;
+}
+
+section#about .section-content-first__container {
+  height: 20rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+section#about .section-content-second__container {
+  height: 20rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+section#about .section-content-first__container h1 {
+  color: white;
+  font-size: 26px;
+  line-height: 1.5em;
+}
+
+section#contact {
+  color: gray;
+
+  min-height: 0;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+section#contact h1 {
+  color: white;
+  font-size: 28px;
+}
+
+section#contact button {
+  background-color: rgb(249, 249, 6);
+  border: none;
+  padding: 1rem 2rem;
+}
+
+footer {
+  background-color: #1a1f24;
+
+  height: 5em;
+  padding: 0 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer ul {
+  display: flex;
+  gap: 1rem;
+}
+
+footer ul img {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+@media (min-width: 961px) {
+  section#principal .principal-section-companies__container {
+    width: 100%;
+    column-gap: 6rem;
+  }
+}
+
 @media (min-width: 1025px) {
+  section {
+    min-height: 70vh;
+  }
+
+  section#article {
+    flex-direction: row;
+  }
+
+  .article-card__container {
+    width: 45%;
+  }
+
   img#hamburguer {
-    display: none;
+    display: flex;
   }
 }
